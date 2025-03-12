@@ -5,16 +5,13 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
+                bat 'javac javaprogg.java'
             }
         }
         stage('Test') {
             steps {
                 echo 'Hello Test'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Hello Deploy'
+                bat 'java javaprogg'
             }
         }
     }
